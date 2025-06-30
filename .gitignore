@@ -56,3 +56,6 @@ UIElementsSchema/
 
 # Будем работать совместно, поэтому папку UserSettings держим каждый у себя
 UserSettings/
+
+# Файлы для Rider сами сгенерятся заново
+.idea/
