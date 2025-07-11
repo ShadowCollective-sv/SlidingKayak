@@ -2495,6 +2495,7 @@ MonoBehaviour:
   Panel_Loading: {fileID: 6420996386775719948}
   text_Progress: {fileID: 6420996388297762314}
   ButtonStart: {fileID: 6420996387153359324}
+  ButtonContinue: {fileID: 0}
 --- !u!82 &2297743346200728031
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2505,7 +2506,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3d1ab6a57cb4425db0513ec10f23b12, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c3d1ab6a57cb4425db0513ec10f23b12, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3158,13 +3160,14 @@ Animation:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6420996386775719948}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 753480c13557d447fbb3d5f3906b4169, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 753480c13557d447fbb3d5f3906b4169, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_UpdateMode: 0
   m_CullingType: 0
 --- !u!1 &6420996387153359324
 GameObject:

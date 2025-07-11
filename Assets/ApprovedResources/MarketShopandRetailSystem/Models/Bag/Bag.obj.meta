@@ -1,9 +1,32 @@
 fileFormatVersion: 2
 guid: 8552b56baa2f5a44dbe3808293cded52
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291107
+  packageName: Market, Shop, Store and Retail Game Creator for Both PC and Mobile
+    Platforms
+  packageVersion: 3.1
+  assetPath: Assets/MarketShopandRetailSystem/Models/Bag/Bag.obj
+  uploadId: 731887
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bag_mesh_n3dMat
+    second: {fileID: 2100000, guid: a6fc63b723bf63340a0d5bc9222c4ffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paper_handle_001_mesh_n3dMat
+    second: {fileID: 2100000, guid: 7151e9f6272e38545a5fd0313c7485d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paper_handle_002_mesh_n3dMat
+    second: {fileID: 2100000, guid: 3fd11f7c6ae6f9d479e7db5bb37127cc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -16,8 +39,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -107,11 +128,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 291107
-  packageName: Market, Shop, Store and Retail Game Creator for Both PC and Mobile
-    Platforms
-  packageVersion: 3.1
-  assetPath: Assets/MarketShopandRetailSystem/Models/Bag/Bag.obj
-  uploadId: 731887

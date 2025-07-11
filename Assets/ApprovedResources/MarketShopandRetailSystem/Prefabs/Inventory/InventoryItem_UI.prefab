@@ -152,8 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipmentDetail: {fileID: 0}
-  ImageSpriteInventory: {fileID: 21300000, guid: 83de1c898d9cb400ab3648e30eedd9ba,
-    type: 3}
+  ImageSpriteInventory: {fileID: 21300000, guid: 83de1c898d9cb400ab3648e30eedd9ba, type: 3}
   ImageSpriteCoin: {fileID: 21300000, guid: da48a9087a4cd4542b703517da4b15ae, type: 3}
   ImageSpriteExp: {fileID: 21300000, guid: 342e55e66087aa442ac750abcae1d577, type: 3}
   Text_Money: {fileID: 4116516051241803116}
