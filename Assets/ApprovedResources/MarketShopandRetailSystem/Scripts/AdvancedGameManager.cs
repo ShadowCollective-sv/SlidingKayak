@@ -16,7 +16,7 @@ namespace MarketShopandRetailSystem
         public Mode CurrentMode = Mode.Free;
         public int StartingMoneyAmount = 1000;
         public int StartingExperienceAmount = 1;
-
+        public int FPSCounter = 60;
 
         public KeyCode InteractingKey;
         public KeyCode GrabbingKey;
@@ -160,7 +160,7 @@ namespace MarketShopandRetailSystem
             InventoryManager.Instance.LoadBuiltObjects();
             InventoryManager.Instance.LoadSellableObjects();
             StartCoroutine(InventoryManager.Instance.ArrangeEverything());
-            Application.targetFrameRate = 60;
+            Application.targetFrameRate = FPSCounter;
             BaseNPCShoppingPercentageRate = NPCShoppingPercentageRate;
             if(postersAmountCanEffectNPCShoppingPercentageRate)
             {
