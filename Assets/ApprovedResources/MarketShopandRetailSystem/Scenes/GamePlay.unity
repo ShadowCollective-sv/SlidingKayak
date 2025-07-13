@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: 901d882ae8d2ada45946b5643a19a0ee, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: c45d6c1f8a5fbdc4ba0cbf105588584a, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -7592,7 +7592,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!4 &1406621181
 Transform:
@@ -7662,9 +7662,9 @@ Terrain:
   m_DeringLightProbesForTrees: 1
   m_ReceiveGI: 1
   m_ScaleInLightmap: 0.0512
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightmapParameters: {fileID: 111300000, guid: 6d22f4d40354a61468a09f349398ccfb, type: 2}
   m_GroupingID: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_AllowAutoConnect: 1
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
@@ -10963,6 +10963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: soda-bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 2389832750081460322, guid: 8e0398a45183b6e4a85997cb3a032904, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3053920578529596120, guid: 8e0398a45183b6e4a85997cb3a032904, type: 3}
       propertyPath: m_LocalScale.x
       value: 24.9
@@ -11818,7 +11822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7812948294358561103, guid: 5b7edcfcaae8fbd4fb6d452ab1c475b0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.78
+      value: 114
       objectReference: {fileID: 0}
     - target: {fileID: 7812948294358561103, guid: 5b7edcfcaae8fbd4fb6d452ab1c475b0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11826,7 +11830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7812948294358561103, guid: 5b7edcfcaae8fbd4fb6d452ab1c475b0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -96.85
+      value: -105.1
       objectReference: {fileID: 0}
     - target: {fileID: 7812948294358561103, guid: 5b7edcfcaae8fbd4fb6d452ab1c475b0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12013,7 +12017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2022920438451722412, guid: 61cf5078934b5a842b7be047acd8cfc4, type: 3}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2022920438451722412, guid: 61cf5078934b5a842b7be047acd8cfc4, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -12811,13 +12815,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4983943745270754058, guid: 274b436236350495a988e6c681ffcaec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5025672814209011346, guid: 274b436236350495a988e6c681ffcaec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 274b436236350495a988e6c681ffcaec, type: 3}
 --- !u!1001 &6979516798247099989
 PrefabInstance:
