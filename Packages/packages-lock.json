@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.sungeargames.ldtools_editor": {
+      "version": "https://github.com/romanilyin/SGG_LDTools.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "496394a2771a9c591382b13fad17f584bc673f52"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.8",
       "depth": 0,
