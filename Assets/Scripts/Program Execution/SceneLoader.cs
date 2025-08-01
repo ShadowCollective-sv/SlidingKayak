@@ -16,6 +16,12 @@ namespace Program_Execution
 
         private IEnumerator LoadScene(string sceneName, Action onLoaded = null) //опциональный callback
         {
+            if (SceneManager.GetActiveScene().name == sceneName)
+            {
+                onLoaded?.Invoke(); //колбэк, что все в порядке
+                yield break; //Прерываем итератор
+            }
+            
             //+ тут нужна ассинхронная загрузка, сцена + экран загрузки
             AsyncOperation waitNextScene = SceneManager.LoadSceneAsync(sceneName); // нам нужно дождаться ее выполнения
             while (!waitNextScene.isDone)

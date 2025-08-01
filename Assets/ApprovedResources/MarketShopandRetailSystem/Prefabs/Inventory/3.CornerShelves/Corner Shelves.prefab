@@ -2183,7 +2183,6 @@ GameObject:
   - component: {fileID: 4069597329426189157}
   - component: {fileID: 461823047887690512}
   - component: {fileID: 1626980740763720521}
-  - component: {fileID: 1372929605647347488}
   m_Layer: 2
   m_Name: Corner Shelves
   m_TagString: Item
@@ -2363,27 +2362,6 @@ MonoBehaviour:
   - {fileID: 7060125304347282915}
   - {fileID: 5271298466598177170}
   - {fileID: 2525992686052258076}
---- !u!65 &1372929605647347488
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4360816911338973350}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4772868, y: 2.2636302, z: 0.7575617}
-  m_Center: {x: -0.011575133, y: 1.1634272, z: -0.52006865}
 --- !u!1 &5106016377430321981
 GameObject:
   m_ObjectHideFlags: 0

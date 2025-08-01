@@ -10,8 +10,9 @@ namespace Program_Execution
 
         private void Awake()
         {
-            _game = new Game();
+            _game = new Game(this);
             _game.StateMachine.Enter<BootstrapState>();
+            
             DontDestroyOnLoad(gameObject); //DontDestroyOnLoad(this);
             //SceneManager.LoadScene("MainMenu");
         }

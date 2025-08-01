@@ -3,20 +3,10 @@ namespace Program_Execution
     internal class Game
     {
         public GameStateMachine StateMachine; //будем обращаться извне
+        public Game(ICoroutineRunner coroutineRunner)
 
-        public Game()
         {
-            StateMachine = new GameStateMachine(); //Подключаем стейт машину в конструкторе  
+            StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner)); //Подключаем стейт машину в конструкторе  
         }
     }
 }
-
-
-// private void Awake()
-// {
-//     InitializeManagers();
-// }
-//
-// private void InitializeManagers()
-// {
-//     //throw new System.NotImplementedException();
