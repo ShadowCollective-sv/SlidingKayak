@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
-public class Enemy
+class  Enemy : MonoBehaviour
 {
-    public string Name;
-    public float Health;
-    public float Damage;
-    public float Speed;
+    private EnemyData EnemyData;
+
+    private void Start()
+    {
+        throw new NotImplementedException();
+    }
 }
