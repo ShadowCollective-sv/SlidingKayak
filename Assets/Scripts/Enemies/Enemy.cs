@@ -11,7 +11,7 @@ class  Enemy : MonoBehaviour
 
     private void Start()
     {
-        InitReset();
+        //InitReset();
     }
     
     
