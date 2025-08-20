@@ -31,7 +31,7 @@ namespace Runtime.Bootstrap
             // StateMachine + стейты
             _machine = new GameStateMachine();
 
-            _machine.Register(new BootstrapState(_machine, sceneLoader));
+            _machine.Register(new BootstrapState(_machine));
             _machine.Register(new MainMenuState(_machine));
             _machine.Register(new LoadLevelState(_machine, sceneLoader));
             _machine.Register(new GameplayState(_machine));

@@ -8,12 +8,7 @@ namespace Runtime.Bootstrap.States
 {
     public sealed class BootstrapState : BaseState
     {
-        private readonly SceneLoader _sceneLoader;
-
-        public BootstrapState(GameStateMachine m, SceneLoader sceneLoader) : base(m)
-        {
-            _sceneLoader = sceneLoader;
-        }
+        public BootstrapState(GameStateMachine m) : base(m) { }
 
         public override async UniTask Enter(object payload, CancellationToken token)
         {
@@ -23,9 +18,6 @@ namespace Runtime.Bootstrap.States
                 InitializeSave(token),
                 InitializeAudio(token)
             );
-
-            // Load the MainMenu scene before transitioning to MainMenuState
-            await _sceneLoader.LoadContentScene("MainMenu", true, token: token); // Assuming "MainMenu" is your scene name
 
             await Machine.Enter<MainMenuState>();
         }
