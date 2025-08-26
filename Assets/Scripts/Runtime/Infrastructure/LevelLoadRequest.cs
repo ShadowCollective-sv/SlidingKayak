@@ -1,21 +1,17 @@
-// LevelLoadRequest.cs
-
-using System;
-using Runtime.Bootstrap.States;
-
-namespace Runtime.Infrastructure
+public enum AfterLoad
 {
-    public sealed class LevelLoadRequest
-    {
-        public string SceneName { get; }
-        public bool ShowLoadingScreen { get; }
-        public Type NextState { get; }
+    GoToGameplay,
+    GoToMainMenu
+}
 
-        public LevelLoadRequest(string sceneName, bool showLoadingScreen, Type nextState = null)
-        {
-            SceneName = sceneName;
-            ShowLoadingScreen = showLoadingScreen;
-            NextState = nextState ?? typeof(GameplayState);
-        }
+public class LevelLoadRequest
+{
+    public string SceneName;
+    public AfterLoad After;
+
+    public LevelLoadRequest(string sceneName, AfterLoad after)
+    {
+        SceneName = sceneName;
+        After = after;
     }
 }

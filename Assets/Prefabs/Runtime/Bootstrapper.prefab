@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8486673588653996947}
-  - component: {fileID: 5566535575913677105}
+  - component: {fileID: 3262786019808647309}
   m_Layer: 0
   m_Name: Bootstrapper
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5566535575913677105
+--- !u!114 &3262786019808647309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,8 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2731720931097263352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33693e34e3239b040927c2591638ef11, type: 3}
+  m_Script: {fileID: 11500000, guid: 0869bea00faa5be48895dbf8ba853595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadingScreen: {fileID: 1205731792421983891, guid: 22b60034514d7e3478874e9d72502430, type: 3}
-  _scenesConfig: {fileID: 11400000, guid: faacab6382feca742b6ed4e6a1fcff45, type: 2}
+  currentState: 0
+  menuSceneName: MainMenu
+  level1SceneName: Level_01
+  pauseMenuUI: {fileID: 0}
+  loadingScreenUI: {fileID: 8538539174009788912, guid: 22b60034514d7e3478874e9d72502430, type: 3}

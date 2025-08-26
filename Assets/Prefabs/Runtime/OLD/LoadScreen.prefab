@@ -86,7 +86,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 64.6
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -336,9 +336,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913766483260754088}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1458734658303014019
 GameObject:
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -936,7 +936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1628257284434294622}
-  - component: {fileID: 1205731792421983891}
+  - component: {fileID: 5593792865914914424}
   m_Layer: 0
   m_Name: LoadScreen
   m_TagString: Untagged
@@ -961,7 +961,7 @@ Transform:
   - {fileID: 1538119544808570407}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1205731792421983891
+--- !u!114 &5593792865914914424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -970,8 +970,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8538539174009788912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db5dc4bc6c114f938276af9a699d2005, type: 3}
+  m_Script: {fileID: 11500000, guid: ca450380c7fb4ccaa2e4c121319994a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canvas: {fileID: 921231281675750290}
-  _progress: {fileID: 0}
+  canvas: {fileID: 921231281675750290}
+  progressBar: {fileID: 2572629760193494697}
