@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: loadingScreenUI
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3262786019808647309, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+      propertyPath: _analyticsManager
+      value: 
+      objectReference: {fileID: 7362356560189812935, guid: 351de627df4c31649843de49bc670e65, type: 3}
     - target: {fileID: 5566535575913677105, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
       propertyPath: MenuScene
       value: 

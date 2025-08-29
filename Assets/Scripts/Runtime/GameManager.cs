@@ -17,8 +17,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private LevelLoadManager LevelLoadPrefab; //указывает на ресурс
     [HideInInspector] public LevelLoadManager _levelLoadManager; //указывает на инстанс
-    
-    [Header("Названия сцен")]
+
+    [SerializeField] private AnalyticsManager _analyticsManager;
+
+
+[Header("Названия сцен")]
     public string menuSceneName = "MainMenu";
     public string level1SceneName = "Level_01";
 
@@ -44,6 +47,8 @@ public class GameManager : MonoBehaviour
     {
         _levelLoadManager = Instantiate(LevelLoadPrefab); //если бы тут было LevelLoadPrefab = Instantiate(LevelLoadPrefab), то мы потеряли бы ссылку на оригинальный префаб в рантайме.
         _levelLoadManager.LoadScene(menuSceneName);
+
+        _analyticsManager = Instantiate(_analyticsManager); //прям перезаписываем в вызов, мне путь на префаб теперь не нужен
     }
 
     // <-- 2. Методы для кнопок теперь 'async void'
