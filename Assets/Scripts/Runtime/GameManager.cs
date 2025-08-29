@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameState currentState;
 
-    [SerializeField] private LevelLoadManager LevelLoadPrefab;
-    [HideInInspector] public LevelLoadManager _levelLoadManager;
+    [SerializeField] private LevelLoadManager LevelLoadPrefab; //указывает на ресурс
+    [HideInInspector] public LevelLoadManager _levelLoadManager; //указывает на инстанс
     
     [Header("Названия сцен")]
     public string menuSceneName = "MainMenu";
@@ -42,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        _levelLoadManager = Instantiate(LevelLoadPrefab);
+        _levelLoadManager = Instantiate(LevelLoadPrefab); //если бы тут было LevelLoadPrefab = Instantiate(LevelLoadPrefab), то мы потеряли бы ссылку на оригинальный префаб в рантайме.
+        _levelLoadManager.LoadScene(menuSceneName);
     }
 
     // <-- 2. Методы для кнопок теперь 'async void'

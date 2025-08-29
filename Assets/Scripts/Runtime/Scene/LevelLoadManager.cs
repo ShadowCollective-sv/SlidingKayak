@@ -20,9 +20,11 @@ namespace Runtime.Scene
 
             do
             {
-                await Task.Delay(100); //Задержка, чтобы загрузка не пролетала мгновенно
+                await Task.Delay(6000); //Задержка, чтобы загрузка не пролетала мгновенно
                 
                 _progressBar.fillAmount = scene.progress;
+                Debug.Log("прогресс сцены");
+                Debug.Log(scene.progress);
             } while (scene.progress < 0.9f);
 
             scene.allowSceneActivation = true; //теперь активируем сцену которую мы грузили.

@@ -136,9 +136,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3262786019808647309, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+      propertyPath: currentState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3262786019808647309, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
       propertyPath: LevelLoadPrefab
       value: 
-      objectReference: {fileID: 6835097802271847159, guid: df89623f748292740b252ebde3a0edb8, type: 3}
+      objectReference: {fileID: 2316060776273900319, guid: 66718688e03bf5347b9615d9cfb77664, type: 3}
     - target: {fileID: 3262786019808647309, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
       propertyPath: loadingScreenUI
       value: 
