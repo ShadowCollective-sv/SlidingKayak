@@ -16,6 +16,7 @@ MonoBehaviour:
     keys:
     - 99c9720ab356a0642a771bea13969a05
     - 023f65e8d77c96548986141222f11857
+    - 78addc77d730f4f38a4a7d5e73530376
     values:
     - goDatas_byGlobalId:
         keys:
@@ -68,5 +69,8 @@ MonoBehaviour:
           iconNameOrGuid: Folder Icon
           isIconRecursive: 0
           isColorRecursive: 0
+    - goDatas_byGlobalId:
+        keys: []
+        values: []
   bookmarks: []
   bookmarkedScenePaths: []

@@ -59,3 +59,6 @@ UserSettings/
 
 # Файлы для Rider сами сгенерятся заново
 .idea/
+
+#Папка для тестовых скриптов.
+[Aa]ssets/Scripts/TEST
