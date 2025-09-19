@@ -18,6 +18,13 @@ using static VHierarchy.Libs.VGUI;
 using static VHierarchy.VHierarchyData;
 using static VHierarchy.VHierarchyCache;
 
+#if UNITY_6000_2_OR_NEWER
+using TreeViewItem = UnityEditor.IMGUI.Controls.TreeViewItem<int>;
+using TreeViewState = UnityEditor.IMGUI.Controls.TreeViewState<int>;
+#endif
+
+
+
 
 
 namespace VHierarchy
@@ -105,7 +112,7 @@ namespace VHierarchy
 
 
 
-                var scrollPos = window.GetMemberValue("m_SceneHierarchy").GetMemberValue<UnityEditor.IMGUI.Controls.TreeViewState>("m_TreeViewState").scrollPos.y;
+                var scrollPos = window.GetMemberValue("m_SceneHierarchy").GetMemberValue<TreeViewState>("m_TreeViewState").scrollPos.y;
 
                 if (scrollPos <= minScrollPos) return;
 
@@ -1722,25 +1729,25 @@ namespace VHierarchy
                 catch { }
 
             }
-            void removeDeletedBookmarks()
-            {
-                if (!data) return;
+            // void removeDeletedBookmarks()
+            // {
+            //     if (!data) return;
 
 
-                var toRemove = data.bookmarks.Where(r => r.isDeleted);
+            //     var toRemove = data.bookmarks.Where(r => r.isDeleted);
 
-                if (!toRemove.Any()) return;
-
-
-                foreach (var r in toRemove.ToList())
-                    data.bookmarks.Remove(r);
-
-                data.Dirty();
+            //     if (!toRemove.Any()) return;
 
 
-                // delayed to give bookmarks a chance to load in update
+            //     foreach (var r in toRemove.ToList())
+            //         data.bookmarks.Remove(r);
 
-            }
+            //     data.Dirty();
+
+
+            //     // delayed to give bookmarks a chance to load in update
+
+            // }
 
 
             subscribe();
@@ -1749,7 +1756,7 @@ namespace VHierarchy
             loadDataAndPaletteDelayed();
             migrateDataFromV1();
 
-            EditorApplication.delayCall += () => removeDeletedBookmarks();
+            // EditorApplication.delayCall += () => removeDeletedBookmarks();
 
             OnDomainReloaded();
 
@@ -1779,7 +1786,7 @@ namespace VHierarchy
 
 
 
-        public const string version = "2.1.1";
+        public const string version = "2.1.4";
 
     }
 

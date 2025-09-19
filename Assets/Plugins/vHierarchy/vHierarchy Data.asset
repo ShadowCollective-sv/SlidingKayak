@@ -11,31 +11,20 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a9752b0c8e144801967e6897679604b, type: 3}
   m_Name: vHierarchy Data
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: VHierarchy::VHierarchy.VHierarchyData
   sceneDatas_byGuid:
     keys:
-    - 99c9720ab356a0642a771bea13969a05
-    - 023f65e8d77c96548986141222f11857
-    - 78addc77d730f4f38a4a7d5e73530376
+    - dc7abef0fe5c35241b9ca4957e45da2c
     values:
     - goDatas_byGlobalId:
         keys:
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-999984843-0
-        values:
-        - colorIndex: 0
-          iconNameOrGuid: Folder Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-    - goDatas_byGlobalId:
-        keys:
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-1697578556-0
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-1000753708-0
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-1086502300-0
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-1031590027-0
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-2089874564-0
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-897007942-0
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-198413502-0
-        - globalObjectIdString: GlobalObjectId_V1-2-023f65e8d77c96548986141222f11857-1339081890-0
+        - globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-1697578556-0
+        - globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-198413502-0
+        - globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-897007942-0
+        - globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-1000753708-0
+        - globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-1086502300-0
+        - globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-1031590027-0
+        - globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-2089874564-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Folder Icon
@@ -65,12 +54,5 @@ MonoBehaviour:
           iconNameOrGuid: Folder Icon
           isIconRecursive: 0
           isColorRecursive: 0
-        - colorIndex: 0
-          iconNameOrGuid: Folder Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-    - goDatas_byGlobalId:
-        keys: []
-        values: []
   bookmarks: []
   bookmarkedScenePaths: []

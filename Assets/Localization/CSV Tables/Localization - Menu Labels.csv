@@ -1,0 +1,9 @@
+Key,Id,English(en),Russian (Russia)(ru-RU)
+UI.MainMenu.NewGame,,New Game,Новая Игра
+UI.MainMenu.Settings,,Settings,Настройки
+UI.MainMenu.Exit,,Exit,Выход
+UI.MainMenu.Leader,,Leaderboard,Таблица лидеров
+UI.MainMenu.Help,,Help,Помощь
+UI.MainMenu.HelpTip,,"Yes, Pick it","Да, выбери это"
+UI.LoadScreen.Loading,,Loading,Загрузка
+UI.Settings.Volume,,Volume,Громкость

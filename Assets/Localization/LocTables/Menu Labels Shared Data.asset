@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Menu Labels Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Menu Labels
+  m_TableCollectionNameGuidString: ea04aaf6028d88b4da9a6101809c4d8e
+  m_Entries:
+  - m_Id: 1
+    m_Key: UI.MainMenu.NewGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Key: UI.MainMenu.Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Key: UI.MainMenu.Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Key: UI.MainMenu.Leader
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Key: UI.MainMenu.Help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39641959882752
+    m_Key: UI.MainMenu.HelpTip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39641980854272
+    m_Key: UI.LoadScreen.Loading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39641980854273
+    m_Key: UI.Settings.Volume
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 369447181987348752
+  references:
+    version: 2
+    RefIds:
+    - rid: 369447181987348752
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1757668590028
