@@ -144,6 +144,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2316060776273900319, guid: 66718688e03bf5347b9615d9cfb77664, type: 3}
     - target: {fileID: 3262786019808647309, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+      propertyPath: level1SceneName
+      value: "\u0432\u0430\u044B\u0430\u044B\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3262786019808647309, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
       propertyPath: loadingScreenUI
       value: 
       objectReference: {fileID: 0}
@@ -151,6 +155,10 @@ PrefabInstance:
       propertyPath: _analyticsManager
       value: 
       objectReference: {fileID: 7362356560189812935, guid: 351de627df4c31649843de49bc670e65, type: 3}
+    - target: {fileID: 3262786019808647309, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+      propertyPath: mainMenuSceneName
+      value: TestRoomGYM
+      objectReference: {fileID: 0}
     - target: {fileID: 5566535575913677105, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
       propertyPath: MenuScene
       value: 
@@ -214,8 +222,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2731720931097263352, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 947281787}
+    - targetCorrespondingSourceObject: {fileID: 2731720931097263352, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 947281788}
   m_SourcePrefab: {fileID: 100100000, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+--- !u!1 &947281786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2731720931097263352, guid: 48fec2e6e46217d498ee9b11c4b9a8a0, type: 3}
+  m_PrefabInstance: {fileID: 206769850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &947281787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947281786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07779420275042e4085c059090185b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyticsManager
+--- !u!114 &947281788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947281786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951198e6fabe4b698397ba0fd1c0dd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Runtime.Scene.LevelLoadManager
+  sceneLoadComponentsPrefabRef: {fileID: 4133673908901015937, guid: a06144bdd2fae114483c6f638fd61ce7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

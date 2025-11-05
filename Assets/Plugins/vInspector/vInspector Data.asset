@@ -13,27 +13,6 @@ MonoBehaviour:
   m_Name: vInspector Data
   m_EditorClassIdentifier: 
   bookmarks:
-  - _obj: {fileID: 2100000, guid: 60ca1117a324e4715851784095e7fb3a, type: 2}
-    globalId:
-      globalObjectIdString: GlobalObjectId_V1-3-60ca1117a324e4715851784095e7fb3a-2100000-0
-    isSceneGameObject: 0
-    isAsset: 1
-    _typeString: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - _obj: {fileID: 2100000, guid: 60522b6de53ee49789996beba200ef59, type: 2}
-    globalId:
-      globalObjectIdString: GlobalObjectId_V1-3-60522b6de53ee49789996beba200ef59-2100000-0
-    isSceneGameObject: 0
-    isAsset: 1
-    _typeString: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - _obj: {fileID: 0}
-    globalId:
-      globalObjectIdString: GlobalObjectId_V1-2-dc7abef0fe5c35241b9ca4957e45da2c-3473325582069086406-4141619451344636786
-    isSceneGameObject: 1
-    isAsset: 0
-    _typeString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   - _obj: {fileID: 11400000, guid: 0546588a1fbd9994490ec41c7c56b4d3, type: 2}
     globalId:
       globalObjectIdString: GlobalObjectId_V1-3-0546588a1fbd9994490ec41c7c56b4d3-11400000-0
@@ -41,3 +20,24 @@ MonoBehaviour:
     isAsset: 1
     _typeString: UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset, Unity.RenderPipelines.Universal.Runtime,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _obj: {fileID: 11400000, guid: 5fafaf8aac594bb428a0beb16a4b7dac, type: 2}
+    globalId:
+      globalObjectIdString: GlobalObjectId_V1-3-5fafaf8aac594bb428a0beb16a4b7dac-11400000-0
+    isSceneGameObject: 0
+    isAsset: 1
+    _typeString: UnityEngine.Rendering.Universal.UniversalRendererData, Unity.RenderPipelines.Universal.Runtime,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - _obj: {fileID: 2100000, guid: 2616ddf5a42ef0a4f85b29f133f57285, type: 2}
+    globalId:
+      globalObjectIdString: GlobalObjectId_V1-3-2616ddf5a42ef0a4f85b29f133f57285-2100000-0
+    isSceneGameObject: 0
+    isAsset: 1
+    _typeString: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - _obj: {fileID: 2100000, guid: f07c48ad165d7124c91367be497fb8ea, type: 2}
+    globalId:
+      globalObjectIdString: GlobalObjectId_V1-3-f07c48ad165d7124c91367be497fb8ea-2100000-0
+    isSceneGameObject: 0
+    isAsset: 1
+    _typeString: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
