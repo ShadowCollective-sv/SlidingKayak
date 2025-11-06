@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f7b256497b74a4496ba5e7e1d81adb, type: 3}
-  m_Name: Test
-  m_EditorClassIdentifier: Assembly-CSharp::HauntedHouses.BaseAbility
+  m_Script: {fileID: 11500000, guid: c3101e1a42d646748b9d3988dfedf4c2, type: 3}
+  m_Name: Dash
+  m_EditorClassIdentifier: Assembly-CSharp::HauntedHouses.DashAbility
+  hasCooldown: 0
+  cooldown: 1
+  castingTime: 0
+  allowedCharacterStates: 00000000

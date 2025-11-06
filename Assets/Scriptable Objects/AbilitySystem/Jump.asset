@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f9598d6ffb2a64e83104e580f3608c, type: 3}
+  m_Name: Jump
+  m_EditorClassIdentifier: Assembly-CSharp::HauntedHouses.Scriptable_Object_Templates.Ability_System.JumpAbility
+  hasCooldown: 0
+  cooldown: 1
+  castingTime: 0
+  allowedCharacterStats: 00000000
