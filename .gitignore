@@ -56,7 +56,7 @@ Assets/StreamingAssets/crashlytics-build.properties
 UIElementsSchema/
 
 # Будем работать совместно, поэтому папку UserSettings держим каждый у себя
-UserSettings/
+# UserSettings/ В этой ветке я один, поэтому можно
 
 # Файлы для Rider сами сгенерятся заново
 .idea/
