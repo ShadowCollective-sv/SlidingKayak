@@ -18,7 +18,7 @@ namespace HauntedHouses
         InBubbles
     }
     
-    public class Character : MonoBehaviour
+    public class CharacterData : MonoBehaviour
     {
         [SerializeField, ReadOnly(true)] private CharacterStates _currentCharacterState = CharacterStates.Idle;
 

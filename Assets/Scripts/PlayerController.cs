@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using HauntedHouses.Scriptable_Object_Templates.Ability_System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 /*Simple player movement controller, based on character controller component, 
 with footstep system based on check the current texture of the component*/
@@ -17,15 +19,16 @@ namespace HauntedHouses
             public AudioClip[] footstepSounds;
         }
 
-
+        //Контролируем текущее состояние персонажа
+        [SerializeField] private CharacterData characterData;
+        
+        [Header("AbilitySystem")] 
+        [SerializeField] private AbilityHolder holder;
+        
         [Header("Keybinds")] 
-        PlayerControls playerControls;
-        
-        //[SerializeField] private KeyCode jumpKey = KeyCode.Space;
         [SerializeField] private KeyCode runKey = KeyCode.LeftShift;
-        
-        
-        
+        //[SerializeField] private KeyCode jumpKey = KeyCode.Space;
+        PlayerControls playerControls;
         
         [Header("Movement")]
 
@@ -37,9 +40,12 @@ namespace HauntedHouses
 
         [Tooltip("Force of the jump with which the controller rushes upwards")]
         [SerializeField] private float jumpForce;
+        public float JumpForce => jumpForce;
 
+        
         [Tooltip("Gravity, pushing down controller when it jumping")]
         [SerializeField] private float gravity = -9.81f;
+        public float Gravity => gravity;
 
         [Header("Mouse Look")] 
         [SerializeField] private Camera playerCamera;
@@ -86,6 +92,7 @@ namespace HauntedHouses
         private RaycastHit _groundHit;
         private float _nextFootstep;
         
+
         private void Awake()
         {
             _characterController = GetComponent<CharacterController>();
@@ -127,12 +134,20 @@ namespace HauntedHouses
         }
 
         //Character controller movement
+        
+        public void ApplyVerticalForce(float force)
+        {
+            _velocity.y = force;
+        }
 
         private void OnJump(InputAction.CallbackContext context)
         {
             if (_characterController.isGrounded)
-                _velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
-            
+            { 
+                //holder.TriggerAbility(); 
+                holder.TriggerAbility("Jump"); 
+                print("Player Controller обработал прыжок");
+            }
             //надо подумать как можно сделать прыжок интереснее
         }
         
@@ -163,6 +178,25 @@ namespace HauntedHouses
             _velocity.y += gravity * Time.deltaTime;
             _characterController.Move(_velocity * Time.deltaTime);
 
+            CharacterStateChanging();
+        }
+
+        private void CharacterStateChanging()
+        {
+            //тут меняем состояние в котором находится персонаж
+            bool isMoving = _horizontalMovement != 0 || _verticalMovement != 0;
+            
+            if (_characterController.isGrounded)
+            {
+                if (isMoving)
+                    characterData.SetCharacterState(CharacterStates.Walking);
+                else
+                    characterData.SetCharacterState(CharacterStates.Idle);
+            }
+            else
+            {
+                characterData.SetCharacterState(CharacterStates.Jumping);
+            }
         }
 
         private void MouseLook()

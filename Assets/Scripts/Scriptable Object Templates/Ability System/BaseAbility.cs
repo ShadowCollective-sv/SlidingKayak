@@ -15,7 +15,6 @@ namespace HauntedHouses.Scriptable_Object_Templates.Ability_System
         public float cooldown = 1f;
         public float castingTime = 0f;
         
-        
         [Header("Allowed States")]
         
         public List<CharacterStates> allowedCharacterStates = new List<CharacterStates>() { CharacterStates.Idle };

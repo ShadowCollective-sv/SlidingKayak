@@ -1,23 +1,34 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Sirenix.OdinInspector;
+using VFavorites.Libs;
 
 namespace HauntedHouses.Scriptable_Object_Templates.Ability_System
 {
+    // Чтобы сериализовать словарь в инспекторе: ключ = имя способности, значение = ScriptableObject способности
+    [System.Serializable]
+    public class AbilityDictionary : VUtils.SerializableDictionary<string,BaseAbility> {}
+    
     public class AbilityHolder : MonoBehaviour
     {
+        [Header("Owner")]
         //Who owns this ability
-        public Character Owner;
+        public CharacterData Owner;
         
-        //The ability to trigger
-        public BaseAbility Ability;
+        [Header("Abilities")]
+        [DictionaryDrawerSettings(KeyLabel = "Ability Name", ValueLabel = "Ability")]
+        public AbilityDictionary Abilities = new AbilityDictionary();
         
-        //
-        public AbilityStates CurrentAbilityState = AbilityStates.ReadyToUse;
+        private PlayerController _playerController;
+        public PlayerController PlayerController => _playerController;
+        
+        //состояния в которых находятся умения
+        private Dictionary<string, AbilityStates> _abilityStates = new Dictionary<string, AbilityStates>();
 
-        private Coroutine _handleAbilityUsage;
-        
-        public UnityEvent OnTriggerAbility;
+        //private Coroutine _handleAbilityUsage; ссылка на корутину может пригодиться для прерывания каста
+        public UnityEvent<string> OnTriggerAbility;
 
         public enum AbilityStates
         {
@@ -26,59 +37,74 @@ namespace HauntedHouses.Scriptable_Object_Templates.Ability_System
             Cooldown = 2
         }
         
-        ///<Summary>
-        /// Triggers the ability
-        ///<Summary>
-
-        public void TriggerAbility()
+        private void Awake()
         {
+            _playerController = GetComponent<PlayerController>();
+            foreach (var kvp in Abilities)
+            {
+                _abilityStates[kvp.Key] = AbilityStates.ReadyToUse;
+            }
+        }
+        
+        /// <Summary>
+        /// Запуск способности по имени
+        /// <Summary>
+
+        public void TriggerAbility(string abilityName)
+        {
+            if (!Abilities.ContainsKey(abilityName)) return;
+
+            BaseAbility ability = Abilities[abilityName];
+                
             //The ability can only be triggered if it's current state is ReadyToUse.
-            if (CurrentAbilityState != AbilityStates.ReadyToUse)
+            if (_abilityStates[abilityName] != AbilityStates.ReadyToUse)
                 return;
             
             //If the character is not in an allowed state then we avoid triggering the ability.
-            if (!CharacterIsOnAllowedState())
+            if (!CharacterIsOnAllowedState(ability))
                 return;
             
             //We start the process of triggering the ability.
-            _handleAbilityUsage = StartCoroutine(CoHandleAbilityUsage());
+            StartCoroutine(CoHandleAbilityUsage(abilityName));
         }
 
         //Checks if the character is in the proper state to trigger the ability.
-        public bool CharacterIsOnAllowedState()
+        private bool CharacterIsOnAllowedState(BaseAbility ability)
         {
-            return Ability.allowedCharacterStates.Contains(Owner.CurrentCharacterState);
+            return ability.allowedCharacterStates.Contains(Owner.CurrentCharacterState);
         }
 
-        private IEnumerator CoHandleAbilityUsage()
+        private IEnumerator CoHandleAbilityUsage(string abilityName)
         {
+            BaseAbility ability = Abilities[abilityName];
+            
             //Sets the ability in casting state.
-            CurrentAbilityState = AbilityStates.Casting;
+            _abilityStates[abilityName] = AbilityStates.Casting;
             
             //Wait for casting time.
-            yield return new WaitForSeconds(Ability.castingTime);
+            yield return new WaitForSeconds(ability.castingTime);
             
             //Triggers the actual ability behavior.
-            Ability.Activate(this);
+            ability.Activate(this);
             
             //Sets the ability on cooldown state.
-            CurrentAbilityState =  AbilityStates.Cooldown;
+            _abilityStates[abilityName] =  AbilityStates.Cooldown;
             
             //Invoking unity method
-            OnTriggerAbility?.Invoke();
+            OnTriggerAbility?.Invoke(abilityName);
             
             //If has cooldown, handle it.
-            if (Ability.hasCooldown) 
-                StartCoroutine(CoHandleCooldown());
+            if (ability.hasCooldown) 
+                StartCoroutine(CoHandleCooldown(abilityName));
         }
 
-        private IEnumerator CoHandleCooldown()
+        private IEnumerator CoHandleCooldown(string abilityName)
         {
             //Wait for cooldown time.
-            yield return new WaitForSeconds(Ability.cooldown);
+            yield return new WaitForSeconds(Abilities[abilityName].cooldown);
             
             //Sets ability ready to use.
-            CurrentAbilityState = AbilityStates.ReadyToUse;
+            _abilityStates[abilityName] = AbilityStates.ReadyToUse;
         }
     }
     

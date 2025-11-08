@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f9598d6ffb2a64e83104e580f3608c, type: 3}
   m_Name: Jump
   m_EditorClassIdentifier: Assembly-CSharp::HauntedHouses.Scriptable_Object_Templates.Ability_System.JumpAbility
-  hasCooldown: 0
-  cooldown: 1
+  hasCooldown: 1
+  cooldown: 0
   castingTime: 0
-  allowedCharacterStats: 00000000
+  allowedCharacterStates: 000000000100000008000000
+  jumpForce: 0.8
