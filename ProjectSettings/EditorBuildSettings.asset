@@ -12,12 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 96538752aef1fe4488e3751354727583
   - enabled: 1
-    path: Assets/Scenes/Suntail Village TEST.unity
+    path: Assets/Biome Nature/Level 1 Meadow Village/Suntail Village TEST.unity
     guid: 6d6d01f51fbe5ed4881f661e0a366009
   - enabled: 1
-    path: Assets/Scenes/TestRoomGYM.unity
+    path: Assets/Biome Nature/Level 0 TestRoomGYM/TestRoomGYM.unity
     guid: bc5f23a2d17d56943823453ed2a5b9c9
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c0319eea3b4272744ab8739e49a5675c, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.localization.settings: {fileID: 11400000, guid: b5ed85b686a98374d8b53ddbc92e505a, type: 2}
   m_UseUCBPForAssetBundles: 0

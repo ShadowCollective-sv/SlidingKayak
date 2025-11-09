@@ -3,6 +3,7 @@ using HauntedHouses.Scriptable_Object_Templates.Ability_System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using System.Collections;
 
 /*Simple player movement controller, based on character controller component, 
 with footstep system based on check the current texture of the component*/
@@ -117,6 +118,7 @@ namespace HauntedHouses
         private void OnEnable()
         {
             playerControls.Player.Jump.performed += OnJump;
+            playerControls.Player.Dash.performed += OnDash;
             playerControls.Player.Enable();
         }
         
@@ -124,6 +126,7 @@ namespace HauntedHouses
         {
             // Отписываемся и выключаем
             playerControls.Player.Jump.performed -= OnJump;
+            playerControls.Player.Dash.performed -= OnDash;
             playerControls.Player.Disable();
         }
         private void Update()
@@ -144,11 +147,31 @@ namespace HauntedHouses
         {
             if (_characterController.isGrounded)
             { 
-                //holder.TriggerAbility(); 
                 holder.TriggerAbility("Jump"); 
                 print("Player Controller обработал прыжок");
             }
-            //надо подумать как можно сделать прыжок интереснее
+        }
+
+        public void ApplyHorizontalForce(Vector3 force, float duration)
+        {
+            StartCoroutine(CoDash(force, duration));
+        }
+
+        private IEnumerator CoDash(Vector3 force, float duration)
+        {
+            float timer = 0f;
+            while (timer < duration)
+            {
+                _characterController.Move(force * Time.deltaTime);
+                timer += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        private void OnDash(InputAction.CallbackContext context)
+        {
+            holder.TriggerAbility("Dash");
+            print("полетели");
         }
         
         private void OnDoubleJump(InputAction.CallbackContext context)
