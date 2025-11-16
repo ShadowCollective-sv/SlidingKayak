@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30479e927c0d4935bf498e0d7f18134d, type: 3}
+  m_Name: Jump
+  m_EditorClassIdentifier: Assembly-CSharp::HauntedHouses.GameplaySystems.AbilitySystem.Model.SO_Templates.AbilityData
+  abilityName: Jump
+  abilityType: 0
+  icon: {fileID: 0}
+  abilityDescription: "\u0421\u0430\u043C\u044B\u0439 \u0432\u044B\u0441\u043E\u043A\u0438\u0439
+    \u043F\u0440\u044B\u0436\u043E\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439
+    \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0441\u0435\u0431\u0435 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044C"
+  hasCooldown: 1
+  cooldown: 0
+  castingTime: 0
+  useCharges: 0
+  maxCharges: 1
+  chargeRestoreTime: 5
+  allowedCharacterStates: 00000000010000000300000002000000
+  isStartingAbility: 1
+  skillPointCost: 1
+  requiredAbilities: []
+  jumpForce: 0.8
+  allowBunnyHop: 1
+  bunnyHopMultiplier: 2000
+  bunnyHopTimeWindow: 2
+  comboMultiplierStep: 6
+  maxComboMultiplier: 100
+  coyoteTime: 10
+  jumpBufferWindow: 1
+  dashForce: 15
+  dashDuration: 0.2
+  fireballPrefab: {fileID: 0}
+  fireballSpeed: 20
+  fireballDamage: 10

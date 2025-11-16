@@ -8,17 +8,21 @@ namespace HauntedHouses
     {
         Idle,
         Walking,
+        Running,
         Patroling,
         Attacking,
         Jumping,
+        CoyoteFalling, //используется для CoyoteTime
+        InAir,
         Dead,
         WallClimbing,
         UsingSpell,
         Dashing,
         InBubbles
     }
+    //вместо Jumping можно просто добавить InAir, а двойной прыжок это просто проверка и использование прыжка
     
-    public class CharacterData : MonoBehaviour
+    public class CharacterModel : MonoBehaviour
     {
         [SerializeField, ReadOnly(true)] private CharacterStates _currentCharacterState = CharacterStates.Idle;
 

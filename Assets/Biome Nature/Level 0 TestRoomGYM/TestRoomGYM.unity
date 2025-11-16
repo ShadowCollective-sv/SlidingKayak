@@ -1019,9 +1019,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 170084292}
     - target: {fileID: 429113797780797042, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
+      propertyPath: abilityHolder
+      value: 
+      objectReference: {fileID: 170084293}
+    - target: {fileID: 429113797780797042, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
       propertyPath: characterData
       value: 
       objectReference: {fileID: 170084292}
+    - target: {fileID: 429113797780797042, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
+      propertyPath: characterModel
+      value: 
+      objectReference: {fileID: 170084292}
+    - target: {fileID: 429113797780797042, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
+      propertyPath: mouseSensitivity
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1427684350101894166, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
       propertyPath: m_LocalPosition.x
       value: 250
@@ -1083,6 +1095,14 @@ PrefabInstance:
       value: PlayerController
       objectReference: {fileID: 0}
     - target: {fileID: 5201750007173429192, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
+      propertyPath: characterData
+      value: 
+      objectReference: {fileID: 170084292}
+    - target: {fileID: 5201750007173429192, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
+      propertyPath: abilitiesData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201750007173429192, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
       propertyPath: Abilities.keys.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1090,6 +1110,10 @@ PrefabInstance:
       propertyPath: Abilities.values.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5201750007173429192, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
+      propertyPath: 'abilitiesData.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d47badcb681803478d85d436bdf654c, type: 2}
     - target: {fileID: 5201750007173429192, guid: 696d521a8f8cdce47b50476d7554c171, type: 3}
       propertyPath: 'Abilities.keys.Array.data[0]'
       value: Jump
@@ -1391,7 +1415,7 @@ GameObject:
   - component: {fileID: 1709583990}
   - component: {fileID: 1709583989}
   - component: {fileID: 1709583988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
