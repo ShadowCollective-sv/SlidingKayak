@@ -14,6 +14,7 @@ namespace HauntedHouses
         Jumping,
         CoyoteFalling, //используется для CoyoteTime
         InAir,
+        LandingBuffered, //используется для Jump Buffer
         Dead,
         WallClimbing,
         UsingSpell,

@@ -48,7 +48,7 @@ namespace HauntedHouses.GameplaySystems.AbilitySystem.Model.SO_Templates
         
         [Header("Jump Settings")]
         [ShowIf("@abilityType == AbilityType.Jump")]
-        public float jumpForce = 10f;
+        public float jumpForce = 0.8f;
         [ShowIf("@abilityType == AbilityType.Jump")]
         public bool allowBunnyHop = true;
         [ShowIf("@abilityType == AbilityType.Jump")]

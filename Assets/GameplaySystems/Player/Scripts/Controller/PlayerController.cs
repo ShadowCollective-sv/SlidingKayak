@@ -28,6 +28,9 @@ namespace HauntedHouses.GameplaySystems.Player.Scripts.Controller
         [Header("Данные Coyote Time")]
         private AbilityData _jumpAbilityData;
         
+        [Header("Данные Jump Buffer")]
+        private float _jumpBufferTime;
+        
         [Header("Mouse Look")]
         [SerializeField] private Camera playerCamera;
         [SerializeField] private float mouseSensitivity = 2f;
@@ -196,7 +199,20 @@ namespace HauntedHouses.GameplaySystems.Player.Scripts.Controller
             
             if (isGrounded)
             {
-                // ✅ НА ЗЕМЛЕ
+                // ⭐ ПРОВЕРКА JUMP BUFFER ПРИ ПРИЗЕМЛЕНИИ
+                float timeSinceJumpInput = Time.time - _jumpBufferTime;
+                float bufferWindow = _jumpAbilityData != null ? _jumpAbilityData.jumpBufferWindow : 0.1f;
+        
+                if (timeSinceJumpInput <= bufferWindow && timeSinceJumpInput > 0)
+                {
+                    // Недавно нажимали Jump - автоматически прыгаем!
+                    characterData.SetCharacterState(CharacterStates.LandingBuffered);
+                    abilityHolder.TriggerAbility("Jump");
+                    _jumpBufferTime = 0f; // Сбрасываем буфер
+                    return;
+                }
+        
+                // Обычные состояния на земле
                 if (_playerControls.Player.Run.IsPressed() && isMoving)
                     characterData.SetCharacterState(CharacterStates.Running);
                 else if (isMoving)
@@ -249,6 +265,7 @@ namespace HauntedHouses.GameplaySystems.Player.Scripts.Controller
         {
             // Регистрируем ввод ДО выполнения команды для jumpbuffer
             JumpCommand.RegisterJumpInput();
+            _jumpBufferTime = Time.time;
             abilityHolder.TriggerAbility("Jump");
             
         }

@@ -24,7 +24,7 @@ MonoBehaviour:
   useCharges: 0
   maxCharges: 1
   chargeRestoreTime: 5
-  allowedCharacterStates: 00000000010000000300000002000000
+  allowedCharacterStates: 0000000001000000030000000200000006000000
   isStartingAbility: 1
   skillPointCost: 1
   requiredAbilities: []
@@ -34,7 +34,7 @@ MonoBehaviour:
   bunnyHopTimeWindow: 2
   comboMultiplierStep: 6
   maxComboMultiplier: 100
-  coyoteTime: 10
+  coyoteTime: 0.15
   jumpBufferWindow: 1
   dashForce: 15
   dashDuration: 0.2
