@@ -24,7 +24,7 @@ MonoBehaviour:
   useCharges: 0
   maxCharges: 1
   chargeRestoreTime: 5
-  allowedCharacterStates: 0000000001000000030000000200000006000000
+  allowedCharacterStates: 000000000100000003000000020000000600000008000000
   isStartingAbility: 1
   skillPointCost: 1
   requiredAbilities: []
@@ -35,7 +35,7 @@ MonoBehaviour:
   comboMultiplierStep: 6
   maxComboMultiplier: 100
   coyoteTime: 0.15
-  jumpBufferWindow: 1
+  jumpBufferWindow: 0.1
   dashForce: 15
   dashDuration: 0.2
   fireballPrefab: {fileID: 0}
